@@ -1,0 +1,124 @@
+#usual_space_1{
+    height: 20px
+}
+#usual_text{
+    width: 1260px;
+    height: 700px;
+    position: relative;
+}
+#usual_text a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 100;
+}
+#usual_1{
+    height: 400px;
+    width: 300px;
+    background-color: #09619f;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-right: 6px;
+}
+#usual_2{
+    height: 400px;
+    width: 200px;
+    background-color: #3CC4C4;
+    position: absolute;
+    left: 306px;
+    top: 0;
+    margin-right: 6px;
+}
+#usual_3{
+    height: 197px;
+    width: 280px;
+    background-color: #1978d8;
+    position: absolute;
+    left: 512px;
+    top: 0;
+    margin-right: 6px;
+    margin-bottom: 3px;
+}
+#usual_4{
+    height: 197px;
+    width: 280px;
+    background-color: #90a8e3;
+    position: absolute;
+    left: 512px;
+    top: 200px;
+    margin-right: 6px;
+    margin-top: 3px;
+}
+#usual_5{
+    height: 197px;
+    width: 462px;
+    background-color: #db6987;
+    position: absolute;
+    left: 798px;
+    top: 0;
+    margin-bottom: 3px;
+}
+#usual_6{
+    height: 197px;
+    width: 462px;
+    background-color: #8e7aaa;
+    position: absolute;
+    left: 798px;
+    top: 200px;
+    margin-top: 3px;
+}
+#usual_7{
+    height: 180px;
+    width: 300px;
+    background-color: #187d9a;
+    position: absolute;
+    left: 0;
+    top: 400px;
+    margin-right: 6px;
+    margin-top: 6px;
+}
+#usual_8{
+    height: 180px;
+    width: 200px;
+    background-color: #eaaf76;
+    position: absolute;
+    left: 306px;
+    top: 400px;
+    margin-right: 6px;
+    margin-top: 6px;
+}
+#usual_9{
+    height: 180px;
+    width: 280px;
+    background-color: #88bad9;
+    position: absolute;
+    left: 512px;
+    top: 400px;
+    margin-right: 6px;
+    margin-top: 6px;
+}
+#usual_10{
+    height: 180px;
+    width: 228px;
+    background-color: #b69ccc;
+    position: absolute;
+    left: 798px;
+    top: 400px;
+    margin-right: 3px;
+    margin-top: 6px;
+}
+#usual_11{
+    height: 180px;
+    width: 228px;
+    background-color: #09619f;
+    position: absolute;
+    left: 1029px;
+    top: 400px;
+    margin-left: 3px;
+    margin-top: 6px;
+}
+#usual_space_2{
+    height: 20px
+}
