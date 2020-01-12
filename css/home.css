@@ -3,9 +3,7 @@
     padding: 0;
     margin: 0;
 }
-a {
-    text-decoration: none;
-}
+a {text-decoration: none;}
 body {
     font-family: "微软雅黑", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", PingHei, STHeiti;
 }
@@ -323,5 +321,7 @@ body {
     font-size: 13px;
 }
 .copyRight__bottom span {margin: 0 15px;}
-.copyRight__bottom a {color: white}
+.copyRight__bottom a {color: white;}
+.copyRight__bottom a:hover {color: #d1d1d2;}
+
 
