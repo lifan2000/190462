@@ -4,7 +4,7 @@
     margin: 0;
 }
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 body {
     font-family: "微软雅黑", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", PingHei, STHeiti;
@@ -263,7 +263,7 @@ body {
 
 
 
-
+.footer {background-image: url("../img/14.jpg")}
 .copyRight {
     height: 133px;
     background: rgba(0,0,0,0.5);
@@ -280,6 +280,7 @@ body {
     border-bottom: 1px solid rgba(255,255,255,0.4);
 }
 .copyRight__left img {
+    display: inline-block;
     width: 170px;
     height: 54px;
 }
@@ -291,16 +292,17 @@ body {
     font-size: 13px;
     font-weight: 100;
     margin-left: 40px;
-    //padding-bottom: 10px;
     line-height: 20px;
+    vertical-align: bottom;
 }
 .copyRight__leftText i {font-size: 15px;}
-.copyRight__leftText span {margin-left: 10px}
+.copyRight__leftText span {margin-left: 15px}
 .copyRight__right {
     float: right;
     width: 119px;
     height: 37px;
-    background: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.4);
     line-height: 37px;
     text-align: center;
 }
@@ -310,8 +312,16 @@ body {
     font-weight: 100;
     color: white;
 }
+.copyRight__right:hover {
+    background: rgba(255,255,255,0);
+}
 .copyRight__bottom {
     height: 38px;
+    padding-top: 20px;
+    color: white;
+    opacity: 0.6;
+    font-size: 13px;
 }
-
+.copyRight__bottom span {margin: 0 15px;}
+.copyRight__bottom a {color: white}
 
