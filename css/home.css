@@ -7,7 +7,7 @@ a {
   text-decoration: none;
 }
 body {
-    font: 12px/1.3 Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-family: "微软雅黑", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", PingHei, STHeiti;
 }
 .header {
     width: 100%;
