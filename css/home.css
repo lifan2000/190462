@@ -162,6 +162,9 @@ body {
     width: 50px;
     height: 20px;
 }
+.icon-search:hover {
+    color: rgb(205, 170, 43);
+}
 #topNav__space {
     float: left;
     width: 30px;
@@ -172,7 +175,7 @@ body {
     font-size: 18px;
     line-height: 20px;
 }
-.topNav__a:hover {color: rgb(159, 128, 39);}
+.topNav__a:hover {color: rgb(205, 170, 43);}
 .topImg {
     position: relative;
     z-index: 0;
@@ -191,7 +194,8 @@ body {
     left: 0;
     display: block;
     overflow: hidden;
-    padding-bottom: 50%;
+    box-sizing: border-box;
+    padding-bottom: 50.9%;
 }
 .topImg__1 {
     position: absolute;
@@ -202,7 +206,7 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-    background-image: url("../img/topImg/军训合影.jpg");
+    background-image: url("../img/home/军训合影.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center top;
@@ -213,7 +217,7 @@ body {
     width: 100%;
     height: 100%;
     display: block;
-    background: url("../img/topImg/topImg__top.png") repeat-x left -1px,url("../img/topImg/topImg__bottom.png") repeat-x left bottom;
+    background: url("../img/home/topImg__top.png") repeat-x left -1px,url("../img/home/topImg__bottom.png") repeat-x left bottom;
 }
 .topImg__img h3 {
     position: absolute;
@@ -283,18 +287,77 @@ body {
     cursor: pointer;
     margin: 0 8px;
 }
+.mainWrap {
+    width: 1400px;
+    margin: auto;
+}
 
 
 
-.footer {background-image: url("../img/14.jpg")}
+.footer {
+    width: 100%;
+    background-size: cover;
+    background-image: url("../img/home/footer.jpg")
+}
+.guide {
+    height: 208px;
+    padding: 230px 0 130px 0;
+}
+.guide > div {
+    width: 28%;
+    height: 190px;
+    border-radius: 9px;
+    opacity: 0.5;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 20px;
+}
+.guide > div:hover {
+    transform: translate(0,-6px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    background: rgba(255,255,255,0.01);
+    opacity: 0.9;
+}
+.guide > div:first-child {float: left;}
+.guide > div:nth-child(2) {float: right;}
+.guide > div:last-child {margin: 0 auto;}
+.guide > div:nth-child(2) p {
+    width: 50%;
+    float: left;
+}
+.guide h3 {
+    width: 100%;
+    height: 40px;
+    color: rgba(255,255,255,1);
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: center;
+    padding-bottom: 15px;
+    margin-bottom: 33px;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+.guide i {
+    position: relative;
+    top: 3px;
+    margin-right: 5px;
+    font-size: 27px;
+}
+.guide p {
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    color: rgba(255,255,255,0.6);
+}
+.guide a {
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
+}
+.guide a:hover {text-decoration: underline;}
 .copyRight {
     height: 133px;
     background: rgba(0,0,0,0.5);
     padding: 50px 0 30px 0;
-}
-.mainWrap {
-    width: 1400px;
-    margin: auto;
 }
 .copyRight__left {
     width: 1400px;
