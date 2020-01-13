@@ -13,7 +13,7 @@ body {
 }
 #topLine {
     height: 4px;
-    background: linear-gradient(90deg, #6510ad 60%, #104fad);
+    background: linear-gradient(90deg, #6510ad 50%, #104fad);
 }
 .navWrapper {
     position: absolute;
@@ -50,11 +50,23 @@ body {
 }
 .mainNav__dt {
     position: relative;
-    height: 46px;
+    margin-top: 2px;
+    height: 44px;
     width: 122px;
 }
-.mainNav__dl dd {
+.mainNav__dl > div {
+    width: 221px;
     display: none;
+    transition-property: opacity;
+    transition-duration: 2s;
+    -moz-transition-property: opacity; /* Firefox 4 */
+    -moz-transition-duration: 2s; /* Firefox 4 */
+    -webkit-transition-property: opacity; /* Safari and Chrome */
+    -webkit-transition-duration: 2s; /* Safari and Chrome */
+    -o-transition-property: opacity; /* Opera */
+    -o-transition-duration: 2s; /* Opera */
+}
+.mainNav__dl dd {
     width: 221px;
     background-color: white;
 }
@@ -76,16 +88,38 @@ body {
     line-height: 46px;
     color: black;
 }
-.mainNav__ddFirst {border-top: 5px solid white;}
-.mainNav__ddLast {border-bottom: 5px solid white;}
-.mainNav__dl:hover dd {
+.mainNav__div dd:first-of-type {
+    border-top: 5px solid white;
+}
+.mainNav__div dd:last-of-type {
+    border-bottom: 5px solid white;
+    border-radius: 0 0 3px 3px;
+}
+.mainNav__dl:hover div {
     display: block;
-    width: 221px;
-    height: 46px;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+}
+@keyframes mainNav__dl_block {
+    from {display: none}
+    to {display: block}
+}
+@-moz-keyframes mainNav__dl_block {
+    from {display: none}
+    to {display: block}
+}
+@-webkit-keyframes mainNav__dl_block {
+    from {display: none}
+    to {display: block}
+}
+@-o-keyframes mainNav__dl_block {
+    from {display: none}
+    to {display: block}
 }
 .mainNav__dl:hover dt {
+    margin-top: 0;
     background-color: white;
-    border-top: 3px solid #deb338;
+    border-top: 2px solid #cda236;
+    border-radius: 2px 2px 0 0;
 }
 .mainNav__dl:hover dt a {color: #6510ad;}
 .mainNav__dl dd:hover {background-color: #eeeeee;}
@@ -142,48 +176,14 @@ body {
 .topImg {
     position: relative;
     z-index: 0;
-    width: 1900px;
-    height: 946px;
 }
 .topImg dl {
     position: relative;
-    width: 1900px;
-    height: 946px;
+    display: block;
 }
-.topImg__nextArrow,.topImg__preArrow{
-    background: black;
-    color: white;
-    width: 70px;
-    height: 70px;
-    opacity: 0.5;
-    line-height: 70px;
-    text-align: center;
-    cursor: pointer;
-    z-index: 1000;
-    margin-top: -35px;
-    border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.5);
-}
-.topImg__preArrow {
-    position: absolute;
-    left: 30px;
-    top: 50%;
-}
-.topImg__nextArrow {
-    position: absolute;
-    right: 30px;
-    top: 50%;
-}
-.icon-nextArrow,.icon-preArrow {font-size: 23px;}
-.topImg__preArrow:hover,.topImg__nextArrow:hover {opacity: 0.4}
 .topImg__img {
     position: relative;
-    top: 0;
-    left: 0;
     display: block;
-    overflow: hidden;
-    width: 1900px;
-    height: 946px;
 }
 .topImg__img div {
     position: relative;
@@ -191,18 +191,17 @@ body {
     left: 0;
     display: block;
     overflow: hidden;
-    width: 1900px;
-    height: 946px;
+    padding-bottom: 50%;
 }
 .topImg__1 {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 999;
     opacity: 1;
     display: block;
-    width: 1900px;
-    height: 946px;
+    width: 100%;
+    height: 100%;
     background-image: url("../img/topImg/军训合影.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -224,8 +223,34 @@ body {
     color: white;
     font-size: 40px;
     font-weight: 400;
-    text-shadow: 2px 2px 0 black;
+    text-shadow: 3px 3px 1px black;
 }
+.topImg__Arrow{
+    background: black;
+    color: white;
+    width: 70px;
+    height: 70px;
+    opacity: 0.5;
+    line-height: 70px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1000;
+    margin-top: -20px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+.preArrow {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+}
+.nextArrow {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+}
+.icon-nextArrow,.icon-preArrow {font-size: 23px;}
+.topImg__Arrow:hover {opacity: 0.4}
 .topImg__bottom {
     display: block;
     position: absolute;
@@ -303,10 +328,11 @@ body {
     border: 1px solid rgba(255,255,255,0.4);
     line-height: 37px;
     text-align: center;
+    border-radius: 4px;
 }
 .copyRight__right a {
     display: block;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 100;
     color: white;
 }
