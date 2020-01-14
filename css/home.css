@@ -6,6 +6,7 @@
 a {text-decoration: none;}
 body {
     font-family: "微软雅黑", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", PingHei, STHeiti;
+    overflow: hidden auto;
 }
 .header {
     width: 100%;
@@ -206,7 +207,7 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-    background-image: url("../img/home/军训合影.jpg");
+    background-image: url("../img/home/topImg-01.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center top;
@@ -217,7 +218,7 @@ body {
     width: 100%;
     height: 100%;
     display: block;
-    background: url("../img/home/topImg__top.png") repeat-x left -1px,url("../img/home/topImg__bottom.png") repeat-x left bottom;
+    background: url("../img/home/topImg-top.png") repeat-x left top,url("../img/home/topImg-bottom.png") repeat-x left bottom;
 }
 .topImg__img h3 {
     position: absolute;
@@ -280,30 +281,62 @@ body {
     display: block;
     width: 34px;
     height: 50px;
-    //background: #9f8027;
-    background: none;
+    border-radius: 4px;
+    background: rgba(184, 134, 194, 0);
     font-size: 16px;
     color: white;
     cursor: pointer;
     margin: 0 8px;
 }
+.topImg__bottom button:hover {
+    background: rgba(184, 134, 194, 0.8);
+}
 .mainWrap {
-    width: 1400px;
+    width: 72%;
     margin: auto;
 }
-
+.section1 {
+     position: relative;
+    z-index: 0;
+    padding-bottom: 280px;
+}
+.section1__background {
+    position: absolute;
+    z-index: -1;
+    width: 200%;
+    height: 100%;
+    right: -5px;
+    top: 0;
+    background-position: left top;
+    background-image: url("../img/home/section1-background.jpg");
+    transform: rotate(-3deg);
+    transform-origin: center top;
+    -moz-transform: rotate(-3deg);
+    -moz-transform-origin: center top;
+    -webkit-transform: rotate(-3deg);
+    -webkit-transform-origin: center top;
+    -ms-transform: rotate(-3deg);
+    -ms-transform-origin: center top;
+    -o-transform: rotate(-3deg);
+    -o-transform-origin: center top;
+}
+.section1__img {
+    position: relative;
+    top: -160px;
+}
 
 
 .footer {
     width: 100%;
     background-size: cover;
+    background-position: center;
     background-image: url("../img/home/footer.jpg")
 }
 .guide {
     height: 208px;
     padding: 230px 0 130px 0;
 }
-.guide > div {
+.guide div div {
     width: 28%;
     height: 190px;
     border-radius: 9px;
@@ -312,16 +345,16 @@ body {
     border: 1px solid rgba(255,255,255,0.4);
     padding: 20px;
 }
-.guide > div:hover {
+.guide div div:hover {
     transform: translate(0,-6px);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     background: rgba(255,255,255,0.01);
     opacity: 0.9;
 }
-.guide > div:first-child {float: left;}
-.guide > div:nth-child(2) {float: right;}
-.guide > div:last-child {margin: 0 auto;}
-.guide > div:nth-child(2) p {
+.guide div div:first-child {float: left;}
+.guide div div:nth-child(2) {float: right;}
+.guide div div:last-child {margin: 0 auto;}
+.guide div div:nth-child(2) p {
     width: 50%;
     float: left;
 }
@@ -353,14 +386,13 @@ body {
     font-size: 16px;
     color: rgba(255,255,255,0.6);
 }
-.guide a:hover {text-decoration: underline;}
+.guide a:hover {color: rgba(255,255,255,1);}
 .copyRight {
     height: 133px;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.4);
     padding: 50px 0 30px 0;
 }
 .copyRight__left {
-    width: 1400px;
     height: 54px;
     padding-bottom: 40px;
     border-bottom: 1px solid rgba(255,255,255,0.4);
@@ -405,12 +437,12 @@ body {
 .copyRight__bottom {
     height: 38px;
     padding-top: 20px;
-    color: white;
+    color: rgba(255,255,255,0.7);
     opacity: 0.6;
     font-size: 13px;
 }
 .copyRight__bottom span {margin: 0 15px;}
-.copyRight__bottom a {color: white;}
-.copyRight__bottom a:hover {color: #d1d1d2;}
+.copyRight__bottom a {color: rgba(255,255,255,0.7);}
+.copyRight__bottom a:hover {color: rgba(255,255,255,1);}
 
 
