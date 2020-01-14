@@ -12,13 +12,40 @@ body {
     width: 1400px;
     margin: auto;
 }
+@media screen and (max-width: 1400px){
+    .mainWrap {
+        width: auto;
+        margin: 0 25px;
+    }
+}
 .header {
     width: 100%;
     height: 100%;
 }
-#topLine {
+.topLine {
     height: 4px;
-    background: linear-gradient(90deg, #6510ad 50%, #104fad);
+    background: linear-gradient(90deg, #6510ad 60%, #104fad);
+}
+.topMenu {
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 14px;
+    z-index: 1000;
+    cursor: pointer;
+}
+.topMenu i {
+    font-size: 20px;
+    color: white;
+    padding: 6px;
+}
+@media screen and (max-width: 1000px) {
+    .topLine {height: 48px}
+    .topMenu {display: block}
+    /*
+    .header.active .menu i {font-size: 30px;}
+    .header.active .menu .icon-menu:before {content: '\ea1f';}
+    */
 }
 .navWrapper {
     position: absolute;
@@ -27,8 +54,6 @@ body {
 }
 .logoWrapper {
     position: absolute;
-    width: 200px;
-    height: 62px;
     top: 40px;
     left: 60px;
 }
@@ -39,17 +64,16 @@ body {
 }
 .nav {
     float: right;
-    width: 854px;
     height: 100px;
-    padding: 30px 35px 30px;
+    margin: 30px 35px 30px;
 }
 .mainNav {
     float: right;
-    width: 854px;
     height: 46px;
-    padding: 39px 0 16px 0;
+    margin: 39px 0 16px 0;
 }
 .mainNav__dl {
+    display: inline-block;
     float: left;
     width: 122px;
 }
@@ -57,9 +81,9 @@ body {
     position: relative;
     margin-top: 2px;
     height: 44px;
-    width: 122px;
+    width: 100%;
 }
-.mainNav__dl > div {
+.mainNav__dl div {
     width: 221px;
     display: none;
     transition-property: opacity;
@@ -72,12 +96,11 @@ body {
     -o-transition-duration: 2s; /* Opera */
 }
 .mainNav__dl dd {
-    width: 221px;
+    width: 100%;
     background-color: white;
 }
 .mainNav__dtA {
     display: block;
-    width: 122px;
     height: 46px;
     font-size: 18px;
     color: white;
@@ -89,9 +112,9 @@ body {
     width: 122px;
     height: 46px;
     font-size: 16px;
+    color: black;
     text-align: center;
     line-height: 46px;
-    color: black;
 }
 .mainNav__div dd:first-of-type {
     border-top: 5px solid white;
@@ -129,15 +152,12 @@ body {
 .mainNav__dl:hover dt a {color: #6510ad;}
 .mainNav__dl dd:hover {background-color: #eeeeee;}
 .topNav {
-    float: right;
     position: absolute;
     top: 40px;
-    right: 62px;
-    width: 250px;
+    right: 63px;
     height: 20px;
 }
 .topNav dl {
-    width: 250px;
     height: 20px;
 }
 .topNav__left {
@@ -181,6 +201,33 @@ body {
     line-height: 20px;
 }
 .topNav__a:hover {color: rgb(205, 170, 43);}
+@media screen and (max-width: 1400px){
+    .nav {margin-right: 10px}
+    .topNav {right: 34px}
+    .mainNav__dl {width: 104px}
+    .mainNav__dtA {font-size: 16px;}
+    .mainNav__dl div {width: 190px}
+    .mainNav__ddA {
+        font-size: 14px;
+        width: 104px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .topNav {right: 25px}
+    .topNav a {font-size: 12px}
+    .icon-search {font-size: 16px}
+    .topNav__left {margin-left: 20px}
+    .mainNav__dl {width: 86px}
+    .mainNav__dtA {font-size: 14px;}
+    .mainNav__dl div {width: 159px}
+    .mainNav__ddA {
+        font-size: 12px;
+        width: 86px;
+    }
+}
+@media screen and (max-width:1000px) {
+    .nav {display: none;}
+}
 .topImg {
     position: relative;
     z-index: 0;
@@ -292,9 +339,8 @@ body {
     cursor: pointer;
     margin: 0 8px;
 }
-.topImg__bottom button:hover {
-    background: rgba(184, 134, 194, 0.8);
-}
+.topImg__bottom button:hover {background: rgba(184, 134, 194, 0.8);}
+
 .section1 {
      position: relative;
     z-index: 0;
@@ -396,6 +442,63 @@ body {
     color: rgba(255,255,255,0.6);
 }
 .guide a:hover {color: rgba(255,255,255,1);}
+@media screen and (max-width: 1920px) {
+    .guide {
+        padding: 190px 0 70px 0;
+        height: 219px;
+    }
+    .guide__content {padding: 24px;}
+    .guide h3 {
+        padding-bottom: 14px;
+        margin-bottom: 24px;
+        font-size: 21px;
+    }
+    .guide i {font-size: 26px;}
+    .guide p,.guide a {font-size: 17px;}
+}
+@media screen and (max-width: 1280px) {
+    .guide {
+        padding: 130px 0 60px 0;
+        height: 190px;
+    }
+    .guide__content {padding: 16px;}
+    .guide h3 {
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        font-size: 19px;
+    }
+    .guide i {font-size: 24px;}
+    .guide p,.guide a {font-size: 15px;}
+}
+@media screen and (max-width: 1000px) {
+    .guide {
+        padding: 50px 0 50px 0;
+        height: 174px;
+    }
+    .guide__content {padding: 11px;}
+    .guide h3 {
+        padding-bottom: 8px;
+        margin-bottom: 11px;
+        font-size: 18px;
+    }
+    .guide i {font-size: 23px;}
+    .guide p,.guide a {font-size: 15px;}
+}
+@media screen and (max-width: 740px) {
+    .guide {
+        padding: 15px 0 15px 0;
+        height: 602px;
+    }
+    .guideWrap {
+        float: none;
+        width: 100%;
+    }
+    .guide__content {
+        margin: 20px 0;
+        opacity: 0.7;
+    }
+    .guide p,.guide a {font-size: 16px;}
+}
 .copyRight {
     background: rgba(0,0,0,0.4);
     padding: 50px 0 30px 0;
@@ -449,5 +552,21 @@ body {
 .copyRight__bottom span {margin: 0 15px;}
 .copyRight__bottom a {color: rgba(255,255,255,0.7);}
 .copyRight__bottom a:hover {color: rgba(255,255,255,1);}
-
+@media screen and (max-width: 1000px) {
+    .copyRight__left img {
+        width: 150px;
+    }
+    .copyRight__leftText {
+        font-size: 12px;
+        padding-left: 20px;
+    }
+    .copyRight__leftText i {font-size: 14px;}
+}
+@media screen and (max-width: 740px) {
+    .copyRight__leftText {
+        display: block;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+}
 
