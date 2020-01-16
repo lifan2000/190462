@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>昌航 - 190462班</title>
     <link rel="icon" href="img/webIco.ico">
     <link rel="stylesheet" href="iconfont/iconfont.css">
@@ -98,34 +98,34 @@
     <!-- 顶部轮播图 -->
     <div class="topImg">
         <dl>
-            <div class="topImg__arrow preArrow">
+            <div class="topImg__arrow" id="preArrow">
                 <i class="iconfont icon-preArrow "></i>
             </div>
             <div class="topImg__img">
-                <div>
-                    <dt class="topImg__img1"><a href=""><h3>美丽的南昌瑶湖森林公园</h3></a></dt>
-                    <!--
-                        <li id="topimg_2"><a href target="_blank"><h3>小寒节气，迎来2020年第一场雪</h3></a></li>
-                        <li id="topimg_3"><a href target="_blank"><h3>2020，一起跨年</h3></a></li>
-                        <li id="topimg_4"><a href target="_blank"><h3>2019，初心依旧 | 那些温润人心的“金句”</h3></a></li>
-                        <li id="topimg_5"><a href target="_blank"><h3>隋森芳院士：微观生物 止于至善</h3></a></li>
-                    -->
+                <div id="imgList">
+                    <dt class="img" id="topImg__img1"><a href=""><h3>美丽的南昌瑶湖森林公园</h3></a></dt>
+                    <dt class="img" id="topImg__img2"><a href=""><h3>教官们的元旦节目彩排，期待</h3></a></dt>
+                    <dt class="img" id="topImg__img3"><a href=""><h3>篮球赛，加油</h3></a></dt>
+                    <dt class="img" id="topImg__img4"><a href=""><h3>六二包干区，子非鱼无戏水</h3></a></dt>
+                    <dt class="img" id="topImg__img5"><a href=""><h3>融创乐园，壮观刺激</h3></a></dt>
+                    <dt class="img" id="topImg__img6"><a href=""><h3>美丽的南昌瑶湖森林公园</h3></a></dt>
                 </div>
             </div>
-            <div class="topImg__arrow nextArrow">
+            <div class="topImg__arrow" id="nextArrow">
                 <i class="iconfont icon-nextArrow"></i>
             </div>
             <div class="topImg__bottom">
-                <dl>
-                    <dt><button>01</button></dt>
-                    <dt><button>02</button></dt>
-                    <dt><button>03</button></dt>
-                    <dt><button>04</button></dt>
-                    <dt><button>05</button></dt>
+                <dl id="btnList">
+                    <dt><button data-index="0">01</button></dt>
+                    <dt><button data-index="1">02</button></dt>
+                    <dt><button data-index="2">03</button></dt>
+                    <dt><button data-index="3">04</button></dt>
+                    <dt><button data-index="4">05</button></dt>
                 </dl>
             </div>
         </dl>
     </div>
+    <script type="text/javascript" src="js/home.js"></script>
 </div>
 <div class="content">
     <div class="section1">
