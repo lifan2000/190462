@@ -1,6 +1,7 @@
 var imgList = document.getElementById("imgList");
 var imgs = document.getElementById("imgList").getElementsByTagName("dt");
 var btns = document.getElementById("btnList").getElementsByTagName("button");
+var a = document.getElementsByClassName("img__a");
 var preArrow = document.getElementById("preArrow");
 var nextArrow = document.getElementById("nextArrow");
 var imgWidth = imgs[0].clientWidth;
@@ -44,36 +45,44 @@ var option = function () {
         inits();
         timers = setInterval(runSmall,1000);
         // 触摸滑动轮播
-        imgList.addEventListener("touchstart",function (ev) {
-            clearInterval(timers);
-            startX = ev.touches[0].clientX;
+        imgList.addEventListener("touchstart",function (e) {
+            if (imgWidth < 1000) {
+                clearInterval(timers);
+                startX = e.touches[0].clientX;
+            }
         });
-        imgList.addEventListener("touchmove",function (ev) {
-            var moveX = ev.touches[0].clientX;
-            distanceX = moveX - startX;
-            var translateX = -imgNum * imgWidth + distanceX;
-            removeTransition();
-            imgList.style.transform = 'translateX(' + translateX + 'px)';
-            imgList.style.webkittransform = 'translateX(' + translateX + 'px)';
-            isMove = true;
+        imgList.addEventListener("touchmove",function (e) {
+            if (imgWidth < 1000) {
+                var moveX = e.touches[0].clientX;
+                distanceX = moveX - startX;
+                var translateX = -imgNum * imgWidth + distanceX;
+                removeTransition();
+                imgList.style.transform = 'translateX(' + translateX + 'px)';
+                imgList.style.webkittransform = 'translateX(' + translateX + 'px)';
+                isMove = true;
+            }
         });
-        imgList.addEventListener("touchend",function (ev) {
-            if (isMove) {
-                if (Math.abs(distanceX) < imgWidth / 3) {
-                    addTransition();
-                    changeImg();
-                    changeImg(imgNum);
+        imgList.addEventListener("touchend",function ( ) {
+            if (imgWidth < 1000) {
+                if (isMove) {
+                    if (Math.abs(distanceX) < imgWidth / 3) {
+                        addTransition();
+                        changeImg();
+                        changeBtn(imgNum);
+                    }
+                    else {
+                        if (distanceX > 0) {imgNum--;}
+                        else {imgNum++;}
+                        addTransition();
+                        changeImg();
+                        changeBtn(imgNum);
+                    }
+                    startX = distanceX = 0;
+                    isMove = false;
+                    clearInterval(times);
+                    times = 0;
+                    timers = setInterval(runSmall,1000);
                 }
-                else {
-                    if (distanceX > 0) {imgNum--;}
-                    else {imgNum++;}
-                    addTransition();
-                    changeImg();
-                    changeBtn(imgNum);
-                }
-                startX = distanceX = 0;
-                isMove = false;
-                times = 0;
             }
         });
         // 无缝轮播
@@ -226,8 +235,8 @@ function check() {
     }
 }
 function addTransition() {
-    imgList.style.transition = "transform 0.4s";
-    imgList.style.webkittransition = "transform 0.4s";
+    imgList.style.transition = "transform 1s";
+    imgList.style.webkittransition = "transform 1s";
 }
 function removeTransition() {
     imgList.style.transition = "";
