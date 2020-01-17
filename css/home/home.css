@@ -239,13 +239,12 @@ body {
 }
 .topImg__img div {
     position: relative;
-    width: calc(100vw * 6);
+    width: calc(100vw * 7);
     height: calc(100vh - 4px);
-    transition: left 0.4s;
-    -webkit-transition: left 0.4s;
 }
 .topImg__img dt {
     display: block;
+    position: absolute;
     width: calc(100vw);
     height: 100%;
     background-repeat: no-repeat;
@@ -255,11 +254,13 @@ body {
     opacity: 0;
     transition: opacity 0.9s;
     -webkit-transition: opacity 0.9s;
-    position: absolute;
 }
 .topImg__img .active {
     z-index: 999;
     opacity: 1;
+}
+#topImg__img0 {
+    background-image: url("../../img/home/topImg-05.jpg");
 }
 #topImg__img1 {
     background-image: url("../../img/home/topImg-01.jpg");
@@ -347,6 +348,8 @@ body {
     cursor: pointer;
     margin: 0 8px;
     outline: none;
+    transition: background 0.3s;
+    -webkit-transition: background 0.3s;
 }
 .topImg__bottom .active {
     background: rgba(184, 134, 194, 1);
@@ -373,13 +376,13 @@ body {
 }
 @media screen and (max-width: 1000px) {
     .topImg__img div {
-        height: auto;
+        height: calc(100vw * 0.469);
     }
     .topImg__img dt {
-        height: calc(100vw * 0.469);
         position: relative;
         float: left;
         opacity: 1;
+        transform: none;
         transition: none;
     }
     .topImg__img a {background: none;}
