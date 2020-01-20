@@ -4,6 +4,11 @@
     margin: 0;
 }
 a {text-decoration: none;}
+ul,li{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
 body {
     font-family: "微软雅黑", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", PingHei, STHeiti;
     overflow: hidden auto;
@@ -141,20 +146,6 @@ body {
     animation: menu 0.03s ease-in-out 0.08s forwards;
     -webkit-animation: menu 0.03s ease-in-out 0.08s forwards;
 }
-@keyframes menu {
-    0% {
-        opacity: 0;
-        transform: translateY(-10px);
-        -ms-transform: translateY(-10px);
-        -webkit-transform: translateY(-10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-        -ms-transform: translateY(0);
-        -webkit-transform: translateY(0);
-    }
-}
 .mainNav__dl:hover dt {
     margin-top: 0;
     background-color: white;
@@ -211,6 +202,20 @@ body {
 }
 .icon-search:hover {color: rgb(205, 170, 43);}
 .topNav__a:hover {color: rgb(205, 170, 43);}
+@keyframes menu {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+    }
+}
 @media screen and (max-width: 1400px){
     .nav {margin-right: 10px;}
     .mainNav__dl {width: 104px}
@@ -541,9 +546,30 @@ body {
 .section1__img {
     position: relative;
     top: -160px;
+    padding-bottom: 280px;
+}
+.section1__1 {
+    position: relative;
+    top: -160px;
+    width: 100%;
+    height: 700px;
+    background-image: url("../../img/home/section1-1-background.jpg");
+    background-position: center bottom;
+    background-size: cover;
+}
+.section1__1 a {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 70px;
+    width: 65%;
+    height: 75%;
+    background-image: url("../../img/home/section1-1-img.jpg");
+    background-position: center bottom;
+    background-size: 100% 100%;
 }
 
-
+.section2 {}
 
 @media screen and (max-width: 1000px) {
     .section1__background {

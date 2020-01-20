@@ -76,7 +76,7 @@ window.onload = function () {
             imgList.addEventListener("touchend",function ( ) {
                 if (imgWidth < 1000) {
                     if (isMove) {
-                        if (Math.abs(distanceX) < imgWidth / 3) {
+                        if (Math.abs(distanceX) < imgWidth  / 5) {
                             addTransition();
                             changeImg();
                             changeBtn(imgNum);

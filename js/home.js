@@ -9,3 +9,6 @@ function menuClose() {
     document.getElementById("menu").className = "iconfont icon-menu";
     document.getElementById("menu").onclick = menuOpen;
 }
+function no(e) {
+    e.preventDefault();
+}
